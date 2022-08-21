@@ -55,5 +55,7 @@
     <frame index="32">images\sprWeapons_32.png</frame>
     <frame index="33">images\sprWeapons_33.png</frame>
     <frame index="34">images\sprWeapons_34.png</frame>
+    <frame index="35">images\sprWeapons_35.png</frame>
+    <frame index="36">images\sprWeapons_36.png</frame>
   </frames>
 </sprite>

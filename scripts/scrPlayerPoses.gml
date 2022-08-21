@@ -8,6 +8,7 @@ if sprite_index=sprPWalkGirlfriend {pose_index=WalkPlayerCarrying}
 if sprite_index=sprPTakePhone {pose_index=sprPTakePhone}
 
 if  sprite_index=sprPWalkSilencer       or
+    sprite_index=sprPWalk9mm       or
     sprite_index=sprPWalkMagnum         or
     sprite_index=sprPWalkScorpion{
         pose_index=WalkPlayerPPoint_index
@@ -19,13 +20,15 @@ if  sprite_index=sprPWalkAxe            or
     }
     
 if  sprite_index=sprPAttackSilencer     or
+    sprite_index=sprPAttack9mm     or
     sprite_index=sprPAttackMagnum       or
     sprite_index=sprPAttackScorpion{
         pose_index=AttackPlayerPPoint_index
     }
 
-if  sprite_index=wpnWalkShotgun         or
-    sprite_index=wpnWalkM16             or
+if  sprite_index=sprPWalkShotgun        or
+    sprite_index=sprPWalkM16            or
+    sprite_index=sprPWalkKalashnikov    or
     sprite_index=sprPWalkDoubleBarrel{
         pose_index=WalkPlayerAim_index
     }
@@ -35,7 +38,7 @@ if  sprite_index=sprPWalkMP5            or
         pose_index=WalkPlayerGangster_index
     }
     
-if  sprite_index=wpnWalkBat            or
+if  sprite_index=sprPWalkBat            or
     sprite_index=sprPWalkPipe           or
     sprite_index=sprPWalkClub           or
     sprite_index=sprPWalkSword          or
@@ -56,11 +59,11 @@ if sprite_index=sprPWalkThrow or sprite_index=sprPWalkPoolBroke{
     }
 //  ATTACK
     
-if  sprite_index=wpnAttackM16{
+if  sprite_index=sprPAttackM16 or sprite_index=sprPAttackKalashnikov{
         pose_index=AttackPlayerAim_index
     }
 
-if  sprite_index=wpnAttackShotgun{
+if  sprite_index=sprPAttackShotgun{
         pose_index=AttackPlayerShotgun_index
     }
     
@@ -68,7 +71,7 @@ if  sprite_index=sprPAttackDoubleBarrel1 or sprite_index=sprPAttackDoubleBarrel2
         pose_index=AttackPlayerGunDBShotgun
     }
     
-if  sprite_index=wpnAttackBat         or
+if  sprite_index=sprPAttackBat         or
     sprite_index=sprPAttackPipe         or
     sprite_index=sprPAttackClub         or
     sprite_index=sprPAttackSword        or

@@ -3,6 +3,7 @@ my_id=instance_create(x+lengthdir_x(14,dir+left*-35),y+lengthdir_y(12,dir+left*-
 PlaySFX(sndThrow)
 my_id.speed=12
 my_id.direction=dir-2+random(4)
+show_debug_message(throwindex)
 my_id.image_index=throwindex
 global.usedthrow[throwindex]=1
 reload=20

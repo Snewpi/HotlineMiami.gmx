@@ -1,8 +1,16 @@
-if image_index=0 objPlayer.sprite_index=wpnWalkM16
-if image_index=1 objPlayer.sprite_index=wpnWalkShotgun
+if image_index > string_is_weapon("", false) {
+    objPlayer.sprite_index = sprPWalkThrow; 
+    objPlayer.throwindex = image_index - (string_is_weapon("", false) + 1);
+} else { 
+    objPlayer.sprite_index = asset_get_index(objPlayer.prefix + "Walk" + string_is_weapon(image_index, false));
+}
+show_debug_message(sprite_get_name(objPlayer.sprite_index))
+/*
+if image_index=0 objPlayer.sprite_index=sprPWalkM16
+if image_index=1 objPlayer.sprite_index=sprPWalkShotgun
 if image_index=2 objPlayer.sprite_index=sprPWalkClub
 if image_index=3 objPlayer.sprite_index=sprPWalkPipe
-if image_index=4 objPlayer.sprite_index=wpnWalkBat
+if image_index=4 objPlayer.sprite_index=sprPWalkBat
 if image_index=5 objPlayer.sprite_index=sprPWalkKnife
 if image_index=6 objPlayer.sprite_index=sprPWalkDoubleBarrel
 if image_index=7 objPlayer.sprite_index=sprPWalkSilencer
@@ -24,6 +32,12 @@ if image_index=22 objPlayer.sprite_index=sprPWalkPan
 if image_index=23 objPlayer.sprite_index=sprPWalkBoilingPot
 if image_index=24 objPlayer.sprite_index=sprPWalkPot
 if image_index=25 objPlayer.sprite_index=sprPWalkSilencedUzi
-if image_index>26 {objPlayer.sprite_index=sprPWalkThrow objPlayer.throwindex=image_index-27}
+
+/*if image_index > string_is_weapon(image_index, false) {
+    objPlayer.sprite_index = sprPWalkThrow 
+    objPlayer.throwindex = image_index-27
+}*/
+//if image_index>26 {objPlayer.sprite_index=sprPWalkThrow objPlayer.throwindex=image_index-27}
+
 if image_index>=0 global.flexibility[image_index]=1
 global.barehanded=0

@@ -40,7 +40,7 @@ with objEnemy {
             createBlood(edir);
 
             if objPlayer.sprite_index = sprPAttackClub or
-            objPlayer.sprite_index = wpnAttackBat or
+            objPlayer.sprite_index = sprPAttackBat or
             objPlayer.sprite_index = sprPAttackCrowbar or
             objPlayer.sprite_index = sprPAttackPan or
             objPlayer.sprite_index = sprPAttackPot or

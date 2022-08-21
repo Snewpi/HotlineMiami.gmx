@@ -108,7 +108,7 @@ legindex+=(abs(myxspeed)+abs(myyspeed))*0.1*factor
 with objDizzy {if dizziness<1 dizziness+=0.01}
 
 //Is the player moving? if yes, increase the image_index of the legs' sprites.
-if scrIsWalking(sprite_index) image_index+=(abs(myxspeed)+abs(myyspeed))*0.05
+if scrIsWalking() image_index+=(abs(myxspeed)+abs(myyspeed))*0.05
 }
 legdir=point_direction(0,0,myxspeed,myyspeed)
 if abs(myxspeed)>0 {

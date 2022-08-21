@@ -61,6 +61,7 @@ shotgunned=0
 aim=0
 SteamSetAchievement("ACH_NIGEL_LOWRIE")
 snap=0
+prefix = "sprP"
 </string>
           </argument>
         </arguments>

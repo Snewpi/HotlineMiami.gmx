@@ -175,6 +175,8 @@
         <sound>sound\sndScorpion</sound>
         <sound>sound\sndSilencer</sound>
         <sound>sound\sndMP5</sound>
+        <sound>sound\snd9mm</sound>
+        <sound>sound\sndKalashnikov</sound>
       </sounds>
       <sound>sound\sndPickUp</sound>
       <sound>sound\sndWeaponHit</sound>
@@ -266,7 +268,7 @@
         <sprites name="Walking">
           <sprite>sprites\sprPWalkAxe</sprite>
           <sprite>sprites\sprPWalkBag</sprite>
-          <sprite>sprites\wpnWalkBat</sprite>
+          <sprite>sprites\sprPWalkBat</sprite>
           <sprite>sprites\sprPWalkBoilingPot</sprite>
           <sprite>sprites\sprPWalkBossgun</sprite>
           <sprite>sprites\sprPWalkClub</sprite>
@@ -275,7 +277,7 @@
           <sprite>sprites\sprPWalkDrill</sprite>
           <sprite>sprites\sprPWalkGirlfriend</sprite>
           <sprite>sprites\sprPWalkKnife</sprite>
-          <sprite>sprites\wpnWalkM16</sprite>
+          <sprite>sprites\sprPWalkM16</sprite>
           <sprite>sprites\sprPWalkMachete</sprite>
           <sprite>sprites\sprPWalkMagnum</sprite>
           <sprite>sprites\sprPWalkMP5</sprite>
@@ -286,9 +288,10 @@
           <sprite>sprites\sprPWalkPoolBroke</sprite>
           <sprite>sprites\sprPWalkPot</sprite>
           <sprite>sprites\sprPWalkScorpion</sprite>
-          <sprite>sprites\wpnWalkShotgun</sprite>
+          <sprite>sprites\sprPWalkShotgun</sprite>
           <sprite>sprites\sprPWalkSilencedUzi</sprite>
           <sprite>sprites\sprPWalkSilencer</sprite>
+          <sprite>sprites\sprPWalk9mm</sprite>
           <sprite>sprites\sprPWalkSledge</sprite>
           <sprite>sprites\sprPWalkSword</sprite>
           <sprite>sprites\sprPWalkTaser</sprite>
@@ -296,11 +299,12 @@
           <sprite>sprites\sprPWalkTrophy</sprite>
           <sprite>sprites\sprPWalkUnarmed</sprite>
           <sprite>sprites\sprPWalkUzi</sprite>
+          <sprite>sprites\sprPWalkKalashnikov</sprite>
         </sprites>
         <sprites name="Attacking">
           <sprite>sprites\sprPAttackAxe</sprite>
           <sprite>sprites\sprPAttackBag</sprite>
-          <sprite>sprites\wpnAttackBat</sprite>
+          <sprite>sprites\sprPAttackBat</sprite>
           <sprite>sprites\sprPAttackBoilingPot</sprite>
           <sprite>sprites\sprPAttackBossgun</sprite>
           <sprite>sprites\sprPAttackClub</sprite>
@@ -309,7 +313,7 @@
           <sprite>sprites\sprPAttackDoubleBarrel2</sprite>
           <sprite>sprites\sprPAttackDrill</sprite>
           <sprite>sprites\sprPAttackKnife</sprite>
-          <sprite>sprites\wpnAttackM16</sprite>
+          <sprite>sprites\sprPAttackM16</sprite>
           <sprite>sprites\sprPAttackMachete</sprite>
           <sprite>sprites\sprPAttackMagnum</sprite>
           <sprite>sprites\sprPAttackMP5</sprite>
@@ -321,9 +325,10 @@
           <sprite>sprites\sprPAttackPot</sprite>
           <sprite>sprites\sprPAttackUnarmed</sprite>
           <sprite>sprites\sprPAttackScorpion</sprite>
-          <sprite>sprites\wpnAttackShotgun</sprite>
+          <sprite>sprites\sprPAttackShotgun</sprite>
           <sprite>sprites\sprPAttackSilencedUzi</sprite>
           <sprite>sprites\sprPAttackSilencer</sprite>
+          <sprite>sprites\sprPAttack9mm</sprite>
           <sprite>sprites\sprPAttackSledge</sprite>
           <sprite>sprites\sprPAttackSword</sprite>
           <sprite>sprites\sprPAttackTaser</sprite>
@@ -332,6 +337,7 @@
           <sprite>sprites\sprPAttackThrow</sprite>
           <sprite>sprites\sprPAttackTrophy</sprite>
           <sprite>sprites\sprPAttackUzi</sprite>
+          <sprite>sprites\sprPAttackKalashnikov</sprite>
         </sprites>
         <sprites name="Dead">
           <sprite>sprites\sprPBackBlunt</sprite>
@@ -2047,6 +2053,9 @@
       <script>scripts\scrInitThrowPos.gml</script>
       <script>scripts\scrKillShield.gml</script>
       <script>scripts\scrGetAmmo.gml</script>
+      <script>scripts\string_contains.gml</script>
+      <script>scripts\string_is_melee.gml</script>
+      <script>scripts\string_is_weapon.gml</script>
     </scripts>
     <scripts name="Enemies">
       <script>scripts\scrChasePlayer.gml</script>

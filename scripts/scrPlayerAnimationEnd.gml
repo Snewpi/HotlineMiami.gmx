@@ -15,36 +15,28 @@ alarm[0]=100
 }
 exit
 }
-if sprite_index=wpnAttackM16 sprite_index=wpnWalkM16
-if sprite_index=wpnAttackShotgun sprite_index=wpnWalkShotgun
-if sprite_index=sprPAttackDoubleBarrel1 sprite_index=sprPWalkDoubleBarrel
-if sprite_index=sprPAttackDoubleBarrel2 sprite_index=sprPWalkDoubleBarrel
-if sprite_index=sprPAttackSilencer sprite_index=sprPWalkSilencer
-if sprite_index=sprPAttackUzi sprite_index=sprPWalkUzi
-if sprite_index=sprPAttackSilencedUzi sprite_index=sprPWalkSilencedUzi
-if sprite_index=sprPAttackMagnum sprite_index=sprPWalkMagnum
-if sprite_index=sprPAttackScorpion sprite_index=sprPWalkScorpion
-if sprite_index=sprPAttackMP5 sprite_index=sprPWalkMP5
-if sprite_index=sprPAttackCrowbar {sprite_index=sprPWalkCrowbar left=-left}
-if sprite_index=sprPAttackPan {sprite_index=sprPWalkPan left=-left}
-if sprite_index=sprPAttackPool {sprite_index=sprPWalkPool left=-left}
-if sprite_index=sprPAttackPoolBroke sprite_index=sprPWalkPoolBroke
-if sprite_index=sprPAttackAxe {sprite_index=sprPWalkAxe left=-left}
-if sprite_index=sprPAttackSledge {sprite_index=sprPWalkSledge left=-left}
-if sprite_index=sprPAttackPot {sprite_index=sprPWalkPot left=-left}
-if sprite_index=sprPAttackBoilingPot {sprite_index=sprPWalkPot left=-left}
-if sprite_index=sprPAttackMachete {sprite_index=sprPWalkMachete left=-left}
-if sprite_index=sprPAttackKnife {sprite_index=sprPWalkKnife left=-left}
-if sprite_index=sprPAttackSword {sprite_index=sprPWalkSword left=-left}
-if sprite_index=wpnAttackBat {sprite_index=wpnWalkBat left=-left}
-if sprite_index=sprPAttackClub {sprite_index=sprPWalkClub left=-left}
-if sprite_index=sprPAttackPipe {sprite_index=sprPWalkPipe left=-left}
-if sprite_index=sprPAttackUnarmed {sprite_index=sprPWalkUnarmed left=-left}
-if sprite_index=sprPAttackBag {sprite_index=sprPWalkBag left=-left}
-if sprite_index=sprPAttackDrill {sprite_index=sprPWalkDrill left=-left}
-if sprite_index=sprPAttackTrophy {sprite_index=sprPWalkTrophy left=-left}
-if sprite_index=sprPAttackNightStick {sprite_index=sprPWalkNightStick left=-left}
-if sprite_index=sprPAttackThrow {sprite_index=sprPWalkUnarmed}
+
+var currentSprite = sprite_get_name(sprite_index);
+if string_contains(currentSprite, prefix + "Attack") {
+
+    //melee + melee extras
+    if string_is_melee(currentSprite) or
+       (sprite_index == sprPAttackUnarmed) {
+            left=-left
+    }
+    //extras
+    if (sprite_index == sprPAttackDoubleBarrel1) or
+       (sprite_index == sprPAttackDoubleBarrel2) {
+        currentSprite = "sprPWalkDoubleBarrel"
+    }
+    
+    if (sprite_index == sprPAttackThrow) {
+        currentSprite = "sprPWalkUnarmed"
+    }
+    
+    sprite_index = asset_get_index(string_replace(currentSprite, "Attack", "Walk"));
+}
+
 if sprite_index=sprPMaskSlip {
 sprite_index=sprPWalkUnarmed 
 maskon=1 

@@ -50,6 +50,7 @@ scrInitPlayer();
             <kind>1</kind>
             <string>/// Load character sprites
 charJacket();
+prefix = "sprP"
 </string>
           </argument>
         </arguments>

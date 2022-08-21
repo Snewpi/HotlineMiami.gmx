@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>scrInitPlayer();
+prefix = "sprBiker"
 </string>
           </argument>
         </arguments>

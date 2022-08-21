@@ -1,4 +1,12 @@
-switch (argument0){
+if (string_contains(sprite_get_name(sprite_index), prefix + "Walk")) {
+    return true;
+}
+if (string_contains(sprite_get_name(sprite_index), prefix + "HumanShield")) {
+    return true;
+}
+return false
+
+/*switch (argument0){
     // Biker
     case sprBikerWalkCleaver:   return true; break;
     case sprBikerWalkUnarmed:          return true; break;
@@ -7,7 +15,7 @@ switch (argument0){
     // Jacket
     case sprPWalkUnarmed:       return true; break;
     case sprPWalkKnife:         return true; break;
-    case wpnWalkBat:           return true; break;
+    case sprPWalkBat:           return true; break;
     case sprPWalkDrill:         return true; break;
     case sprPWalkPipe:          return true; break;
     case sprPWalkClub:          return true; break;
@@ -18,8 +26,8 @@ switch (argument0){
     case sprPWalkPoolBroke:     return true; break;
     case sprPWalkThrow:         return true; break;
     case sprPWalkNightStick:    return true; break;
-    case wpnWalkM16:            return true; break;
-    case wpnWalkShotgun:        return true; break;
+    case sprPWalkM16:           return true; break;
+    case sprPWalkShotgun:       return true; break;
     case sprPWalkMagnum:        return true; break;
     case sprPWalkDoubleBarrel:  return true; break;
     case sprPWalkScorpion:      return true; break;
@@ -34,6 +42,7 @@ switch (argument0){
     case sprPWalkTaser:         return true; break;
     case sprPWalkSilencer:      return true; break;
     
+    
     // Human Shield
     case sprPHumanShieldSilencer:       return true; break;
     case sprPHumanShieldUzi:            return true; break;
@@ -47,5 +56,7 @@ switch (argument0){
     case sprPWalkGirlfriend:    return true; break;
     case sprPWalkBossgun:       return true; break;
     
+    
     default: return false; break;
     }
+    

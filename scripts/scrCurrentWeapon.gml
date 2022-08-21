@@ -1,8 +1,13 @@
-if objPlayer.sprite_index=wpnWalkM16 return 0
-if objPlayer.sprite_index=wpnWalkShotgun return 1
+if objPlayer.sprite_index = sprPWalkThrow return (string_is_weapon("",false)) + throwindex
+if objPlayer.sprite_index =  sprPWalkUnarmed or objPlayer.sprite_index = sprPAttackUnarmed or sprite_index = sprPAttackThrow  return -123
+
+return string_is_weapon(sprite_get_name(objPlayer.sprite_index), true);
+/*
+if objPlayer.sprite_index=sprPWalkM16 return 0
+if objPlayer.sprite_index=sprPWalkShotgun return 1
 if objPlayer.sprite_index=sprPWalkPipe return 3 
 if objPlayer.sprite_index=sprPWalkClub return 2
-if objPlayer.sprite_index=wpnWalkBat return 4
+if objPlayer.sprite_index=sprPWalkBat return 4
 if objPlayer.sprite_index=sprPWalkKnife return 5
 if objPlayer.sprite_index=sprPWalkDoubleBarrel return 6
 if objPlayer.sprite_index=sprPWalkSilencer return 7
@@ -28,11 +33,11 @@ if objPlayer.sprite_index=sprPWalkThrow return 27+throwindex
 if objPlayer.sprite_index=sprPWalkUnarmed or objPlayer.sprite_index=sprPAttackUnarmed or sprite_index=sprPAttackThrow  return -123
 
 
-if objPlayer.sprite_index=wpnAttackM16 return 0
-if objPlayer.sprite_index=wpnAttackShotgun return 1
+if objPlayer.sprite_index=sprPAttackM16 return 0
+if objPlayer.sprite_index=sprPAttackShotgun return 1
 if objPlayer.sprite_index=sprPAttackClub return 2
 if objPlayer.sprite_index=sprPAttackPipe return 3 
-if objPlayer.sprite_index=wpnAttackBat return 4
+if objPlayer.sprite_index=sprPAttackBat return 4
 if objPlayer.sprite_index=sprPAttackKnife return 5
 if objPlayer.sprite_index=sprPAttackDoubleBarrel1 or objPlayer.sprite_index=sprPAttackDoubleBarrel2 return 6
 if objPlayer.sprite_index=sprPAttackSilencer return 7

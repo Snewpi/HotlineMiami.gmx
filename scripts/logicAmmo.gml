@@ -1,38 +1,46 @@
 showammo = 0
 if instance_exists(objPlayer) {
-    if objPlayer.sprite_index = wpnWalkM16 or objPlayer.sprite_index = wpnAttackM16 {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "M16") {
         showammo = 1
         maxammo = 24
     }
-    if objPlayer.sprite_index = sprPWalkUzi or objPlayer.sprite_index = sprPAttackUzi {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Uzi") {
         showammo = 1
         maxammo = 30
     }
-    if objPlayer.sprite_index = sprPWalkScorpion or objPlayer.sprite_index = sprPAttackScorpion {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Scorpion") {
         showammo = 1
         maxammo = 20
     }
-    if objPlayer.sprite_index = sprPWalkMagnum or objPlayer.sprite_index = sprPAttackMagnum {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Magnum") {
         showammo = 1
         maxammo = 6
     }
-    if objPlayer.sprite_index = sprPWalkSilencedUzi or objPlayer.sprite_index = sprPAttackSilencedUzi {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "SilencedUzi") {
         showammo = 1
         maxammo = 30
     }
-    if objPlayer.sprite_index = wpnWalkShotgun or objPlayer.sprite_index = wpnAttackShotgun {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Shotgun") {
         showammo = 1
         maxammo = 6
     }
-    if objPlayer.sprite_index = sprPWalkDoubleBarrel or objPlayer.sprite_index = sprPAttackDoubleBarrel1 or objPlayer.sprite_index = sprPAttackDoubleBarrel2 {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "DoubleBarrel") {
         showammo = 1
         maxammo = 2
     }
-    if objPlayer.sprite_index = sprPWalkSilencer or objPlayer.sprite_index = sprPAttackSilencer {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Silencer") {
         showammo = 1
         maxammo = 13
     }
-    if objPlayer.sprite_index = sprPWalkMP5 or objPlayer.sprite_index = sprPAttackMP5 {
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "9mm") {
+        showammo = 1
+        maxammo = 15
+    }
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "Kalashnikov") {
+        showammo = 1
+        maxammo = 24
+    }
+    if string_contains(sprite_get_name(objPlayer.sprite_index), "MP5") {
         showammo = 1
         maxammo = 32
     }

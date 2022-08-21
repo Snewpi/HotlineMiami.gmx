@@ -115,7 +115,7 @@ objPlayer.throwreload=30
 }
 
 
-if noweapon=1 global.test=4 else {if lastweapon>26 global.test=2}
+if noweapon=1 global.test=4 else {if lastweapon>string_is_weapon("", false) global.test=2}
 
 
 if lastweapon<0 exit
@@ -152,7 +152,7 @@ PlaySFX(sndThrow)
 my_id.speed=10
 my_id.direction=dir-5+random(10)
 my_id.ammo=lastammo
-my_id.image_index=lastweapon-27
+my_id.image_index=lastweapon-(string_is_weapon("",false)+1)
 global.usedthrow[my_id.image_index]=1
 if global.gotweapon=0 sprite_index=sprPWalkUnarmed
 release=1

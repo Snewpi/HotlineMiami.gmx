@@ -229,7 +229,7 @@ exit
 }
 
 if state=6 {
-if objPlayer.sprite_index=wpnWalkShotgun {
+if objPlayer.sprite_index=sprPWalkShotgun {
 with objLight {
 if color=c_yellow targetstrength=1
 }
