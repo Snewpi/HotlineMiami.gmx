@@ -267,7 +267,7 @@ instance_destroy()
 exit
 }
 if sprite_index=sprEFatAttack {sprite_index=sprEFatWalk update=1}
-if sprite_index=sprESearchFat {sprite_index=sprEFatWalk image_speed=0}
+if sprite_index=sprEFatSearch {sprite_index=sprEFatWalk image_speed=0}
 if update=1 {
 image_speed=0
 image_yscale=-image_yscale

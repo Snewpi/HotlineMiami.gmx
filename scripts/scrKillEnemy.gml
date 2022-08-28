@@ -8,7 +8,7 @@ with objEnemy {
             my_id = instance_create(x, y - 12, objScore)
             if object_get_parent(object_index) = objEnemyIdle {
                 if room = rmTrainstationEntrance sprite_index = sprEWalkKnife
-                else sprite_index = choose(sprEWalkShotgun, sprEWalkM16)
+                else sprite_index = giveIdleEnemyWeapon() //choose(sprEWalkShotgun, sprEWalkM16)
             }
             if sprite_index = sprEWalkUnarmed or sprite_index = sprPoliceWalkUnarmed {
                 my_id.text = "+" + string((100) + 100 * global.factor) + "pts";

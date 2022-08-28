@@ -10,6 +10,6 @@ if argument0=sprPoliceSearchGun return true
 if argument0=sprPoliceSearchNightStick return true
 if argument0=sprPoliceSearchM16 return true
 if argument0=sprPoliceSearchShotgun return true
-if argument0=sprESearchFat return true
+if argument0=sprEFatSearch return true
 if argument0=sprPInspectorSearch return true
 return false

@@ -1,10 +1,9 @@
-if image_index > string_is_weapon("", false) {
+if image_index > scrWeaponList(4) {
     objPlayer.sprite_index = sprPWalkThrow; 
-    objPlayer.throwindex = image_index - (string_is_weapon("", false) + 1);
+    objPlayer.throwindex = image_index - (scrWeaponList(4) + 1);
 } else { 
-    objPlayer.sprite_index = asset_get_index(objPlayer.prefix + "Walk" + string_is_weapon(image_index, false));
+    objPlayer.sprite_index = asset_get_index("spr" + objPlayer.prefix + "Walk" + scrWeaponList(0, image_index));
 }
-show_debug_message(sprite_get_name(objPlayer.sprite_index))
 /*
 if image_index=0 objPlayer.sprite_index=sprPWalkM16
 if image_index=1 objPlayer.sprite_index=sprPWalkShotgun
@@ -32,11 +31,6 @@ if image_index=22 objPlayer.sprite_index=sprPWalkPan
 if image_index=23 objPlayer.sprite_index=sprPWalkBoilingPot
 if image_index=24 objPlayer.sprite_index=sprPWalkPot
 if image_index=25 objPlayer.sprite_index=sprPWalkSilencedUzi
-
-/*if image_index > string_is_weapon(image_index, false) {
-    objPlayer.sprite_index = sprPWalkThrow 
-    objPlayer.throwindex = image_index-27
-}*/
 //if image_index>26 {objPlayer.sprite_index=sprPWalkThrow objPlayer.throwindex=image_index-27}
 
 if image_index>=0 global.flexibility[image_index]=1

@@ -1,7 +1,7 @@
-if (string_contains(sprite_get_name(sprite_index), prefix + "Walk")) {
+if (string_contains(sprite_get_name(sprite_index), "spr" + prefix + "Walk")) {
     return true;
 }
-if (string_contains(sprite_get_name(sprite_index), prefix + "HumanShield")) {
+if (string_contains(sprite_get_name(sprite_index), "spr" + prefix + "HumanShield")) {
     return true;
 }
 return false

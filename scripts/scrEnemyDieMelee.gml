@@ -1,9 +1,10 @@
+//for killing throws
 global.gunkill=0
 global.shake=7
 pdir=point_direction(global.my_id.x,global.my_id.y,x,y)
 
 if object_get_parent(object_index)=objEnemyIdle {
-if room=rmTrainstationEntrance sprite_index=choose(sprEWalkKnife,sprEWalkBat,sprEWalkClub,sprEWalkPipe) else sprite_index=choose(sprEWalkShotgun,sprEWalkM16)
+if room=rmTrainstationEntrance sprite_index=choose(sprEWalkKnife,sprEWalkBat,sprEWalkClub,sprEWalkPipe) else sprite_index=giveIdleEnemyWeapon()
 }
 
 createBlood(pdir);

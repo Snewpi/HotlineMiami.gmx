@@ -59,11 +59,11 @@ global.maskon=1
 if image_index=0 {
 my_id=instance_create(x,y,objPlayerJacket)
 if sprite_index=sprPTrophyKill my_id.sprite_index=sprPWalkTrophy
-if sprite_index=sprPBatKill my_id.sprite_index=sprPWalkBat
-if sprite_index=sprPPipeKill my_id.sprite_index=sprPWalkPipe
-if sprite_index=sprPClubKill my_id.sprite_index=sprPWalkClub
-if sprite_index=sprPBagKill my_id.sprite_index=sprPWalkBag
-if sprite_index=sprPNightStickKill my_id.sprite_index=sprPWalkNightStick
+if sprite_index=sprPKillBat my_id.sprite_index=sprPWalkBat
+if sprite_index=sprPKillPipe my_id.sprite_index=sprPWalkPipe
+if sprite_index=sprPKillClub my_id.sprite_index=sprPWalkClub
+if sprite_index=sprPKillBag my_id.sprite_index=sprPWalkBag
+if sprite_index=sprPKillNightStick my_id.sprite_index=sprPWalkNightStick
 global.angle=image_angle-180
 my_id.reload=10
 with my_id move_outside_solid(global.angle,16)

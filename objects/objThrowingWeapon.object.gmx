@@ -58,7 +58,7 @@ bounce=0</string>
 if speed&lt;=0 {
 my_id=instance_create(x,y,objWeapon)
 my_id.image_angle=angle
-my_id.image_index=(string_is_weapon("",false)+1)+image_index
+my_id.image_index=(scrWeaponList(4)+1)+image_index
 my_id.image_yscale=left
 my_id.ammo=ammo
 instance_destroy()

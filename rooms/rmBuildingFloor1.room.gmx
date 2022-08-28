@@ -170,7 +170,7 @@ global.done=0</code>
     <instance objName="objWallBrickV" x="608" y="0" name="inst_CE7F6093" locked="0" code="" scaleX="1" scaleY="53" colour="4294967295" rotation="0"/>
     <instance objName="objWallHeavyV" x="448" y="256" name="inst_520342B1" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="objWallHeavyV" x="416" y="320" name="inst_9E9677C4" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWeapon" x="144" y="272" name="inst_D51EEEE7" locked="0" code="image_index = 27;&#xA;ammo = 24;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWeapon" x="144" y="272" name="inst_D51EEEE7" locked="0" code="image_index = 26;&#xA;ammo = 13;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tlFloorTilesBackUp" x="208" y="368" w="16" h="16" xo="224" yo="80" id="10050895" name="tile_905A7467" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

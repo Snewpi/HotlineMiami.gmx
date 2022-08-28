@@ -1,36 +1,67 @@
 ///string_is_weapon(sprite, returnID);
-//contains all weapons
-var wepArr = -1;;
-wepArr[0] = "M16"
-wepArr[1] = "Shotgun"
-wepArr[2] = "Club"
-wepArr[3] = "Pipe"
-wepArr[4] = "Bat"
-wepArr[5] = "Knife"
-wepArr[6] = "DoubleBarrel"
-wepArr[7] = "Silencer"
-wepArr[8] = "Sword"
-wepArr[9] = "Uzi"
-wepArr[10] = "Magnum"
-wepArr[11] = "Scorpion"
-wepArr[12] = "MP5"
-wepArr[13] = "Pool"
-wepArr[14] = "PoolBroke"
-wepArr[15] = "Axe"
-wepArr[16] = "NightStick"
-wepArr[17] = "Crowbar"
-wepArr[18] = "Machete"
-wepArr[19] = "Sledge"
-wepArr[20] = "Trophy"
-wepArr[21] = "Drill"
-wepArr[22] = "Pan"
-wepArr[23] = "BoilingPot"
-wepArr[24] = "Pot"
-wepArr[25] = "SilencedUzi"
-wepArr[26] = "9mm"
-wepArr[27] = "Kalashnikov"
-
+//contains all weapons, always place new weapon at the end of list
+var wepArr = -1;
 var i = 0;
+wepArr[i] = "M16"
+i++;
+wepArr[i] = "Shotgun"
+i++;
+wepArr[i] = "Club"
+i++;
+wepArr[i] = "Pipe"
+i++;
+wepArr[i] = "Bat"
+i++;
+wepArr[i] = "Knife"
+i++;
+wepArr[i] = "DoubleBarrel"
+i++;
+wepArr[i] = "Silencer"
+i++;
+wepArr[i] = "Sword"
+i++;
+wepArr[i] = "Uzi"
+i++;
+wepArr[i] = "Magnum"
+i++;
+wepArr[i] = "Scorpion"
+i++;
+wepArr[i] = "MP5"
+i++;
+wepArr[i] = "Pool"
+i++;
+wepArr[i] = "PoolBroke"
+i++;
+wepArr[i] = "Axe"
+i++;
+wepArr[i] = "NightStick"
+i++;
+wepArr[i] = "Crowbar"
+i++;
+wepArr[i] = "Machete"
+i++;
+wepArr[i] = "Sledge"
+i++;
+wepArr[i] = "Trophy"
+i++;
+wepArr[i] = "Drill"
+i++;
+wepArr[i] = "Pan"
+i++;
+wepArr[i] = "BoilingPot"
+i++;
+wepArr[i] = "Pot"
+i++;
+wepArr[i] = "SilencedUzi"
+i++;
+wepArr[i] = "9mm"
+i++;
+wepArr[i] = "Kalashnikov"
+i++;
+
+
+
+i = 0;
 repeat(array_length_1d(wepArr)) {
     if (argument1) {
         if string_contains(argument0, wepArr[i]) {

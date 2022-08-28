@@ -20,14 +20,14 @@
   <width>48</width>
   <height>48</height>
   <frames>
-    <frame index="0">images\sprHoboAttack_0.png</frame>
-    <frame index="1">images\sprHoboAttack_1.png</frame>
-    <frame index="2">images\sprHoboAttack_2.png</frame>
-    <frame index="3">images\sprHoboAttack_3.png</frame>
-    <frame index="4">images\sprHoboAttack_4.png</frame>
-    <frame index="5">images\sprHoboAttack_5.png</frame>
-    <frame index="6">images\sprHoboAttack_6.png</frame>
-    <frame index="7">images\sprHoboAttack_7.png</frame>
-    <frame index="8">images\sprHoboAttack_8.png</frame>
+    <frame index="0">images\sprHoboAttackBat_0.png</frame>
+    <frame index="1">images\sprHoboAttackBat_1.png</frame>
+    <frame index="2">images\sprHoboAttackBat_2.png</frame>
+    <frame index="3">images\sprHoboAttackBat_3.png</frame>
+    <frame index="4">images\sprHoboAttackBat_4.png</frame>
+    <frame index="5">images\sprHoboAttackBat_5.png</frame>
+    <frame index="6">images\sprHoboAttackBat_6.png</frame>
+    <frame index="7">images\sprHoboAttackBat_7.png</frame>
+    <frame index="8">images\sprHoboAttackBat_8.png</frame>
   </frames>
 </sprite>

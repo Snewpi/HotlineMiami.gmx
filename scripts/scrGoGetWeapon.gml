@@ -9,7 +9,8 @@ global.check=0
 while i<instance_number(objWeapon) and global.check=0 {
 target=scrInstanceNearest(objWeapon,i)
 if instance_exists(target) {
-if target.image_index<=7 {
+//enemy can grab weapon here
+if scrWeaponList(5, target.image_index) {
 if !scrCollisionLineExt(x,y,target.x,target.y,4,objSolid,objShootThrough,objDoorV) {
 global.check=1
 weaponfind=1

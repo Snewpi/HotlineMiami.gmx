@@ -50,7 +50,8 @@ scrInitPlayer();
             <kind>1</kind>
             <string>/// Load character sprites
 charJacket();
-prefix = "sprP"
+prefix = "P"
+defaultExecution = objEnemyBash;
 </string>
           </argument>
         </arguments>

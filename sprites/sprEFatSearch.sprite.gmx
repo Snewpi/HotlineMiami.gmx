@@ -20,15 +20,15 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\sprESearchFat_0.png</frame>
-    <frame index="1">images\sprESearchFat_1.png</frame>
-    <frame index="2">images\sprESearchFat_2.png</frame>
-    <frame index="3">images\sprESearchFat_3.png</frame>
-    <frame index="4">images\sprESearchFat_4.png</frame>
-    <frame index="5">images\sprESearchFat_5.png</frame>
-    <frame index="6">images\sprESearchFat_6.png</frame>
-    <frame index="7">images\sprESearchFat_7.png</frame>
-    <frame index="8">images\sprESearchFat_8.png</frame>
-    <frame index="9">images\sprESearchFat_9.png</frame>
+    <frame index="0">images\sprEFatSearch_0.png</frame>
+    <frame index="1">images\sprEFatSearch_1.png</frame>
+    <frame index="2">images\sprEFatSearch_2.png</frame>
+    <frame index="3">images\sprEFatSearch_3.png</frame>
+    <frame index="4">images\sprEFatSearch_4.png</frame>
+    <frame index="5">images\sprEFatSearch_5.png</frame>
+    <frame index="6">images\sprEFatSearch_6.png</frame>
+    <frame index="7">images\sprEFatSearch_7.png</frame>
+    <frame index="8">images\sprEFatSearch_8.png</frame>
+    <frame index="9">images\sprEFatSearch_9.png</frame>
   </frames>
 </sprite>

@@ -1,7 +1,7 @@
-if objPlayer.sprite_index = sprPWalkThrow return (string_is_weapon("",false)) + throwindex
+if objPlayer.sprite_index = sprPWalkThrow return (scrWeaponList(4) + 1) + throwindex
 if objPlayer.sprite_index =  sprPWalkUnarmed or objPlayer.sprite_index = sprPAttackUnarmed or sprite_index = sprPAttackThrow  return -123
 
-return string_is_weapon(sprite_get_name(objPlayer.sprite_index), true);
+return scrWeaponList(0, sprite_get_name(objPlayer.sprite_index));
 /*
 if objPlayer.sprite_index=sprPWalkM16 return 0
 if objPlayer.sprite_index=sprPWalkShotgun return 1

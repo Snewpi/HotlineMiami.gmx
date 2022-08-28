@@ -17,11 +17,12 @@ exit
 }
 
 var currentSprite = sprite_get_name(sprite_index);
-if string_contains(currentSprite, prefix + "Attack") {
+if string_contains(currentSprite, "spr" + prefix + "Attack") {
 
     //melee + melee extras
-    if string_is_melee(currentSprite) or
-       (sprite_index == sprPAttackUnarmed) {
+    if (scrWeaponList(2, currentSprite)) or
+       (sprite_index == sprPAttackUnarmed) or 
+       (sprite_index == sprPAttackBag) {
             left=-left
     }
     //extras

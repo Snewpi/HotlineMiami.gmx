@@ -35,6 +35,7 @@ path=path_add()
 on=0
 alarm[0]=random(250)
 energie=0
+prefix="sprE"
 </string>
           </argument>
         </arguments>

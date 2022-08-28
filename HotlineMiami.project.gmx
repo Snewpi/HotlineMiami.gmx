@@ -356,15 +356,15 @@
         <sprites name="Executions">
           <sprite>sprites\sprPAttackFaceKick</sprite>
           <sprite>sprites\sprPAttackSnap</sprite>
-          <sprite>sprites\sprPBagKill</sprite>
+          <sprite>sprites\sprPKillBag</sprite>
           <sprite>sprites\sprPBashBodyguard</sprite>
           <sprite>sprites\sprPBashBoss2</sprite>
           <sprite>sprites\sprPBashHobo</sprite>
-          <sprite>sprites\sprPBatKill</sprite>
+          <sprite>sprites\sprPKillBat</sprite>
           <sprite>sprites\sprPBrickKill</sprite>
           <sprite>sprites\sprPBrokenPoolKill</sprite>
           <sprite>sprites\sprPClubBoss2</sprite>
-          <sprite>sprites\sprPClubKill</sprite>
+          <sprite>sprites\sprPKillClub</sprite>
           <sprite>sprites\sprPDrillKillPolice</sprite>
           <sprite>sprites\sprPKillBoilingPot</sprite>
           <sprite>sprites\sprPKillBottle</sprite>
@@ -378,11 +378,11 @@
           <sprite>sprites\sprPKillPot</sprite>
           <sprite>sprites\sprPKillSledgeHammer</sprite>
           <sprite>sprites\sprPKnifeKill</sprite>
-          <sprite>sprites\sprPPipeKill</sprite>
+          <sprite>sprites\sprPKillPipe</sprite>
           <sprite>sprites\sprPPoolKill</sprite>
           <sprite>sprites\sprPScissorKill</sprite>
           <sprite>sprites\sprPStrangleAssassin</sprite>
-          <sprite>sprites\sprPNightStickKill</sprite>
+          <sprite>sprites\sprPKillNightStick</sprite>
           <sprite>sprites\sprPTrophyKill</sprite>
           <sprite>sprites\sprPSwordKill</sprite>
           <sprite>sprites\sprPAttackBash</sprite>
@@ -709,7 +709,7 @@
           <sprite>sprites\sprEFatDie</sprite>
           <sprite>sprites\sprEFatLegs</sprite>
           <sprite>sprites\sprEFatWalk</sprite>
-          <sprite>sprites\sprESearchFat</sprite>
+          <sprite>sprites\sprEFatSearch</sprite>
         </sprites>
         <sprites name="Police">
           <sprites name="Walking">
@@ -831,7 +831,7 @@
       </sprites>
       <sprites name="Bosses">
         <sprites name="Hobo">
-          <sprite>sprites\sprHoboAttack</sprite>
+          <sprite>sprites\sprHoboAttackBat</sprite>
           <sprite>sprites\sprHoboBashed</sprite>
           <sprite>sprites\sprHoboGetUp</sprite>
           <sprite>sprites\sprHoboGround</sprite>
@@ -2054,8 +2054,9 @@
       <script>scripts\scrKillShield.gml</script>
       <script>scripts\scrGetAmmo.gml</script>
       <script>scripts\string_contains.gml</script>
-      <script>scripts\string_is_melee.gml</script>
-      <script>scripts\string_is_weapon.gml</script>
+      <scripts name="weaponliststuff">
+        <script>scripts\scrWeaponList.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Enemies">
       <script>scripts\scrChasePlayer.gml</script>
@@ -2155,6 +2156,9 @@
       <script>scripts\scrCollisionLineExt.gml</script>
       <script>scripts\scrChaseWall.gml</script>
       <script>scripts\scrCollisionLineDouble.gml</script>
+      <script>scripts\giveIdleEnemyWeapon.gml</script>
+      <script>scripts\giveIdleEnemyGun.gml</script>
+      <script>scripts\giveIdleEnemyMelee.gml</script>
     </scripts>
     <scripts name="Visuals">
       <scripts name="HotTextEffects">
@@ -3741,24 +3745,24 @@
           <object>objects\objEnemyHeadKick</object>
           <object>objects\objPBrickKill</object>
           <object>objects\objPAttackSnap</object>
-          <object>objects\objPBluntKill</object>
-          <object>objects\objPAxeKill</object>
+          <object>objects\objPKillBlunt</object>
+          <object>objects\objPKillAxe</object>
           <object>objects\objPScissorKill</object>
-          <object>objects\objPSwordKill</object>
-          <object>objects\objPKnifeKill</object>
-          <object>objects\objPPoolKill</object>
-          <object>objects\objPBrokenPoolKill</object>
+          <object>objects\objPKillSword</object>
+          <object>objects\objPKillKnife</object>
+          <object>objects\objPKillPool</object>
+          <object>objects\objPKillBrokenPool</object>
           <object>objects\objPClubBoss2</object>
           <object>objects\objPHoboBash</object>
           <object>objects\objPHoboBlunt</object>
           <object>objects\objPBodyguardBlunt</object>
           <object>objects\objPBodyguardBash</object>
-          <object>objects\objPDrillKill</object>
-          <object>objects\objPSledgeKill</object>
-          <object>objects\objPMacheteKill</object>
+          <object>objects\objPKillDrill</object>
+          <object>objects\objPKillSledge</object>
+          <object>objects\objPKillMachete</object>
           <object>objects\objPBottleKill</object>
           <object>objects\objPDartKill</object>
-          <object>objects\objPBoilingPotKill</object>
+          <object>objects\objPKillBoilingPot</object>
           <object>objects\objPKillBodyguard</object>
           <object>objects\objPHammerKill</object>
         </objects>

@@ -1,17 +1,6 @@
-//avoid using names like throwingknife for new weapons
-/*if (argument0 == asset_get_index("WalkThrow")) {
-    return string_is_weapon("", false) + throwindex;
-}
-if string_contains(sprite_get_name(argument0), "Unarmed") {
-    return -123;
-}
-
-if (argument0 == asset_get_index("AttackThrow")) {
-    return -123;
-}*/
-if argument0 = sprPWalkThrow return (string_is_weapon("",false) + 1) + throwindex
+if argument0 = sprPWalkThrow return (scrWeaponList(4) + 1) + throwindex
 if argument0 = sprPWalkUnarmed or argument0 = sprPAttackUnarmed or argument0 = sprPAttackThrow return -123
-return string_is_weapon(sprite_get_name(argument0), true);
+return scrWeaponList(0, sprite_get_name(argument0));
 /*if argument0=sprPAttackM16 or argument0=sprPoliceWalkM16 or argument0=sprEM16Crouching return 0
 if argument0=sprPAttackShotgun or argument0=sprPoliceWalkShotgun return 1
 if argument0=sprPAttackPipe return 3 

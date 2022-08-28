@@ -2,7 +2,7 @@ var check;
 check=0
 
 
-if argument0=sprPPipeKill or argument0=sprPKillCrowbar or argument0=sprPTrophyKill or argument0=sprPClubKill or argument0=sprPBatKill or argument0=sprPPoolKill or argument0=sprPKillPan or argument0=sprPKillPot or argument0=sprPAxeKill{
+if argument0=sprPKillPipe or argument0=sprPKillCrowbar or argument0=sprPTrophyKill or argument0=sprPKillClub or argument0=sprPKillBat or argument0=sprPPoolKill or argument0=sprPKillPan or argument0=sprPKillPot or argument0=sprPAxeKill{
 maskaddx[0]=0 maskaddy[0]=0
 maskaddx[1]=0 maskaddy[1]=0
 maskaddx[2]=0 maskaddy[2]=0

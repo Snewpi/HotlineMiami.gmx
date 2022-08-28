@@ -20,13 +20,13 @@
   <width>60</width>
   <height>60</height>
   <frames>
-    <frame index="0">images\sprPBatKill_0.png</frame>
-    <frame index="1">images\sprPBatKill_1.png</frame>
-    <frame index="2">images\sprPBatKill_2.png</frame>
-    <frame index="3">images\sprPBatKill_3.png</frame>
-    <frame index="4">images\sprPBatKill_4.png</frame>
-    <frame index="5">images\sprPBatKill_5.png</frame>
-    <frame index="6">images\sprPBatKill_6.png</frame>
-    <frame index="7">images\sprPBatKill_7.png</frame>
+    <frame index="0">images\sprPKillBat_0.png</frame>
+    <frame index="1">images\sprPKillBat_1.png</frame>
+    <frame index="2">images\sprPKillBat_2.png</frame>
+    <frame index="3">images\sprPKillBat_3.png</frame>
+    <frame index="4">images\sprPKillBat_4.png</frame>
+    <frame index="5">images\sprPKillBat_5.png</frame>
+    <frame index="6">images\sprPKillBat_6.png</frame>
+    <frame index="7">images\sprPKillBat_7.png</frame>
   </frames>
 </sprite>

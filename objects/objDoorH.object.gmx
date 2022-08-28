@@ -106,10 +106,10 @@ if swinger=1 or swinger=0 {
 if other.sprite_index=sprEWalkUnarmed or other.sprite_index=sprPoliceWalkUnarmed noweapon=1 else noweapon=0
 with other {
 if object_get_parent(object_index)=objEnemyIdle {
-if room=rmTrainstationEntrance or room=rmHouse3Downstairs or room=rmBossClubFloor3 sprite_index=sprEWalkBat else sprite_index=choose(sprEWalkClub,sprEWalkBat,sprEWalkKnife,sprEWalkPipe,sprEWalkM16,sprEWalkShotgun)
+if room=rmTrainstationEntrance or room=rmHouse3Downstairs or room=rmBossClubFloor3 sprite_index=sprEWalkBat else sprite_index=giveIdleEnemyWeapon()
 ammo=0
-if sprite_index=sprEWalkShotgun ammo=6 
-if sprite_index=sprEWalkM16 ammo=24
+//if sprite_index=sprEWalkShotgun ammo=6 
+ammo = scrWeaponList(1, sprite_get_name(sprite_index));
 }
 }
 global.shake=6
