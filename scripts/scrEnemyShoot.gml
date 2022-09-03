@@ -30,6 +30,32 @@ if sprite_index = sprEWalkM16 or sprite_index = sprPoliceWalkM16 or sprite_index
   }
 }
 
+//Kalashnikov
+if sprite_index = sprEWalkKalashnikov {
+  if reload > 0 reload -= 1
+  else {
+    shake = 1
+    ammo -= 1
+    light = 10
+    global.shake = 3
+    PlaySFX(sndKalashnikov)
+    mask_index = sprWeaponMask
+    reload = 5
+    if place_meeting(x + lengthdir_x(8, angle), y + lengthdir_y(8, angle), objSolid) {
+      my_id = instance_create(x, y, objSmokeHit)
+      my_id.image_angle = image_angle
+      global.dir = angle
+      with my_id {
+        move_contact_solid(global.dir, 16)
+      }
+    } else {
+      CreateBullet(objEBullet, false)
+    }
+    CreateShell(sprM16Shell)
+    mask_index = sprMask
+  }
+}
+
 // Shotgun
 if sprite_index = sprEWalkShotgun or sprite_index = sprPoliceWalkShotgun {
   if reload > 0 reload -= 1

@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Weapons
 if object_get_parent(object_index)=objEnemyIdle exit
-prefix="sprE"
-if sprite_index=sprite0 sprite_index=giveIdleEnemyGun()//choose(sprEWalkM16,sprEWalkShotgun,sprEWalkDoubleBarrel)
+prefix="E"
+if sprite_index=sprite0 sprite_index=scrGiveEnemyWeapon(2)//choose(sprEWalkM16,sprEWalkShotgun,sprEWalkDoubleBarrel)
 </string>
           </argument>
         </arguments>

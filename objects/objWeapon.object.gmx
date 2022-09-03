@@ -29,7 +29,13 @@
 image_angle=random(360)
 image_index=floor(random(sprite_get_number(sprite_index)))
 var weaponCount = scrWeaponList(4);
-while (global.newgun[15]=0 and image_index=7) or (global.newgun[0]=0 and image_index=8) or (global.newgun[8]=0 and image_index=9) or (global.newgun[2]=0 and image_index=10) or (global.newgun[5]=0 and image_index=11) or (global.newgun[12]=0 and image_index=12) or image_index=13 or image_index=14 or (global.newgun[13]=0 and image_index=15) or image_index=16 or image_index=17 or (global.newgun[3]=0 and image_index=18) or (global.newgun[9]=0 and image_index=19) or image_index=20 or image_index=21 or image_index=22 or image_index=23 or image_index=24 or image_index=25 or image_index=weaponCount or (global.newgun[14]=0 and image_index=weaponCount+1) or (global.newgun[1]=0 and image_index=weaponCount+2) or (global.newgun[4]=0 and image_index=weaponCount+3) or (global.newgun[7]=0 and image_index=weaponCount+4) or (global.newgun[10]=0 and image_index=weaponCount+5) or (global.newgun[6]=0 and image_index=weaponCount+6) or (global.newgun[11]=0 and image_index=weaponCount+7) or image_index=weaponCount+8 image_index=floor(random(sprite_get_number(sprite_index)))
+//while (global.newgun[15]=0 and image_index=7) or (global.newgun[0]=0 and image_index=8) or (global.newgun[8]=0 and image_index=9) or (global.newgun[2]=0 and image_index=10) or (global.newgun[5]=0 and image_index=11) or (global.newgun[12]=0 and image_index=12) or image_index=13 or image_index=14 or (global.newgun[13]=0 and image_index=15) or image_index=16 or image_index=17 or (global.newgun[3]=0 and image_index=18) or (global.newgun[9]=0 and image_index=19) or image_index=20 or image_index=21 or image_index=22 or image_index=23 or image_index=24 or image_index=25 or image_index=weaponCount or (global.newgun[14]=0 and image_index=weaponCount+1) or (global.newgun[1]=0 and image_index=weaponCount+2) or (global.newgun[4]=0 and image_index=weaponCount+3) or (global.newgun[7]=0 and image_index=weaponCount+4) or (global.newgun[10]=0 and image_index=weaponCount+5) or (global.newgun[6]=0 and image_index=weaponCount+6) or (global.newgun[11]=0 and image_index=weaponCount+7) or image_index=weaponCount+8 image_index=floor(random(sprite_get_number(sprite_index)))
+//no support for when unlocked
+while (scrWeaponList(8, image_index) == false) or 
+    (image_index == weaponCount) or
+    (image_index == weaponCount + 8) {
+        image_index = floor(random(sprite_get_number(sprite_index)));
+}
 ammo=0
 if global.maskindex=17 image_index=choose(2,3,4,5)
 if global.maskindex=3 image_index=choose(0,1,6)

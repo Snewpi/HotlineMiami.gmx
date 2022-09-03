@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Weapons
-prefix="sprE"
-sprite_index=giveIdleEnemyMelee()
+prefix="E"
+sprite_index=scrGiveEnemyWeapon(1)
 
 ammo=0
 </string>
@@ -71,7 +71,7 @@ stopchase=0
 weaponfind=0
 lastsprite=sprite_index
 shake = 0;
-prefix="sprE"
+prefix="E"
 </string>
           </argument>
         </arguments>

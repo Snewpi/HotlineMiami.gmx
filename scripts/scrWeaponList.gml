@@ -9,15 +9,14 @@
 //5 - returns enemy can use weapon
 //6 - returns value of execution
 //7 - returns execution name
-//8 - returns enemy melee
+//8 - returns random spawn
 
 var wepArr = -1;
-var i = 0;
 wepArr[0, 0] = "M16"    //Name(case sensitive)
 wepArr[0, 1] = 24       // ammo count
 wepArr[0, 2] = 1        // is gun = 1, is melee = 0
 wepArr[0, 3] = true     // can spawn randomly
-wepArr[0, 4] = true     // enemy can use weapon(may become redundant later)
+wepArr[0, 4] = true     // enemy can use weapon (spawning with weapon is in scrGiveEnemyWeapon)
 wepArr[0, 5] = 0        // 0 = can't execute, 1 = can execute, 2 = use blunt execution
 
 wepArr[1, 0] = "Shotgun"
@@ -109,7 +108,7 @@ wepArr[13, 1] = 0
 wepArr[13, 2] = 0
 wepArr[13, 3] = false
 wepArr[13, 4] = false
-wepArr[12, 5] = 1
+wepArr[13, 5] = 1
 
 wepArr[14, 0] = "PoolBroke"
 wepArr[14, 1] = 0
@@ -206,7 +205,7 @@ wepArr[27, 0] = "Kalashnikov"
 wepArr[27, 1] = 24
 wepArr[27, 2] = 1
 wepArr[27, 3] = true
-wepArr[27, 4] = false
+wepArr[27, 4] = true
 wepArr[27, 5] = 0
 
 
@@ -276,12 +275,15 @@ repeat (array_height_2d(wepArr)) {
     
     //return 4
     if (argument[0] == 4) {
-        return array_height_2d(wepArr);    
+        returnVal = array_height_2d(wepArr);   
+        wepArr = -1;
+        return returnVal;  
     }
     
     //return 5
     if (argument[0] == 5) {
-        if (argument[1] < array_height_2d(wepArr) + 1) && (wepArr[argument[1], 4] == true) {
+        if (argument[1] < array_height_2d(wepArr)) && (wepArr[argument[1], 4] == true) {
+            wepArr = -1;
             return true;
         }
     }
@@ -289,24 +291,41 @@ repeat (array_height_2d(wepArr)) {
     //return 6
     if (argument[0] == 6) {
         if (string_contains(argument[1], wepArr[i, 0])) {
-            return wepArr[i, 5];
+            returnVal = wepArr[i, 5];
+            wepArr = -1;
+            return returnVal;
         }
     }
     
    // return 7
    if (argument[0] == 7) {
        if (string_contains(argument[1], wepArr[i, 0])) { 
-            return wepArr[i, 0];
+            returnVal = wepArr[i, 0];
+            wepArr = -1;
+            return returnVal;
+       }
+   }
+   // return 7
+   if (argument[0] == 7) {
+       if (string_contains(argument[1], wepArr[i, 0])) { 
+            returnVal = wepArr[i, 0];
+            wepArr = -1;
+            return returnVal;
        }
    }
    
    //return 8
    if (argument[0] == 8) {
-       if (wepArr[0, 4] == true) {
-            game_end()
+       if (argument[1] < array_height_2d(wepArr)) {
+           returnVal = wepArr[argument[1], 3];
+           wepArr = -1;
+           return returnVal;
+       } else {
+         wepArr = -1;
+         return true;
        }
    }
-    
+   
     i++;
 }
 

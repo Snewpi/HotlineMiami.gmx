@@ -592,6 +592,7 @@
             <sprite>sprites\sprEM16CourchingLegs</sprite>
             <sprite>sprites\sprEM16Crouching</sprite>
             <sprite>sprites\sprEGiveUp</sprite>
+            <sprite>sprites\sprEWalkKalashnikov</sprite>
           </sprites>
           <sprites name="Attacking">
             <sprite>sprites\sprEAttackClub</sprite>
@@ -2156,9 +2157,7 @@
       <script>scripts\scrCollisionLineExt.gml</script>
       <script>scripts\scrChaseWall.gml</script>
       <script>scripts\scrCollisionLineDouble.gml</script>
-      <script>scripts\giveIdleEnemyWeapon.gml</script>
-      <script>scripts\giveIdleEnemyGun.gml</script>
-      <script>scripts\giveIdleEnemyMelee.gml</script>
+      <script>scripts\scrGiveEnemyWeapon.gml</script>
     </scripts>
     <scripts name="Visuals">
       <scripts name="HotTextEffects">

@@ -41,6 +41,15 @@ direction=point_direction(x,y,target.x,target.y)
 image_speed=0.2
 if place_meeting(x,y,target) {
 my_id=-123123
+if (scrWeaponList(5, target.image_index)) {
+    if (scrWeaponList(2, target.image_index)) {
+        my_id = instance_create(x, y, objEnemyMelee);
+    } else {
+        my_id = instance_create(x, y, objEnemy);
+    }
+    my_id.sprite_index = asset_get_index("spr" + my_id.prefix + "Walk" + scrWeaponList(0, target.image_index));
+} else exit;
+/*
 if target.image_index=0 {my_id=instance_create(x,y,objEnemy) my_id.sprite_index=sprEWalkM16}
 if target.image_index=1 {my_id=instance_create(x,y,objEnemy) my_id.sprite_index=sprEWalkShotgun}
 if target.image_index=2 {my_id=instance_create(x,y,objEnemyMelee) my_id.sprite_index=sprEWalkClub}
@@ -50,6 +59,7 @@ if target.image_index=5 {my_id=instance_create(x,y,objEnemyMelee) my_id.sprite_i
 if target.image_index=6 {my_id=instance_create(x,y,objEnemy) my_id.sprite_index=sprEWalkDoubleBarrel}
 if target.image_index=7 {my_id=instance_create(x,y,objEnemy) my_id.sprite_index=sprEWalkSilencer}
 if target.image_index>7 exit
+*/
 if instance_exists(target) my_id.ammo=target.ammo
 PlaySFX("Pick Up")
 with target instance_destroy()

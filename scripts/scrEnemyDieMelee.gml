@@ -4,7 +4,7 @@ global.shake=7
 pdir=point_direction(global.my_id.x,global.my_id.y,x,y)
 
 if object_get_parent(object_index)=objEnemyIdle {
-if room=rmTrainstationEntrance sprite_index=choose(sprEWalkKnife,sprEWalkBat,sprEWalkClub,sprEWalkPipe) else sprite_index=giveIdleEnemyWeapon()
+if room=rmTrainstationEntrance sprite_index=choose(sprEWalkKnife,sprEWalkBat,sprEWalkClub,sprEWalkPipe) else sprite_index=scrGiveEnemyWeapon(0);
 }
 
 createBlood(pdir);
